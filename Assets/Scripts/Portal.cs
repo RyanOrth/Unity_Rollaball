@@ -4,7 +4,7 @@ using UnityEngine;
 public class Portal : MonoBehaviour
 {
     public GameObject exitPortal;
-    public Transform exitPortalExitSpace;
+    private Transform exitPortalExitSpace;
     private BoxCollider portalCollider;
     private BoxCollider exitPortalCollider;
     private Vector3 heading;
@@ -19,6 +19,7 @@ public class Portal : MonoBehaviour
         exitPortalCollider = exitPortal.GetComponent<BoxCollider>();
 
         // Get local forward direction
+        exitPortalExitSpace = exitPortal.transform.Find("PortalExitSpace");
         heading = exitPortalExitSpace.position - exitPortal.transform.position;
     }
 
