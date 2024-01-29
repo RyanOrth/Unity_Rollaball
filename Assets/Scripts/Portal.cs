@@ -30,7 +30,7 @@ public class Portal : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (!isTriggered && other.gameObject.CompareTag("Player"))
+        if (!isTriggered && other.gameObject.CompareTag("Ball"))
         {
             isTriggered = true;
 
